@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إمساكية رمضان 2026 - بابل</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;500;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #00427c;
+            --gold: #d4af37;
+            --light-bg: #f9fbfd;
+            --white: #ffffff;
+            --text-dark: #2c3e50;
+        }
+
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #002a50 100%);
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+            position: relative;
+        }
+
+        .thawab-banner {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 10px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 2px solid var(--gold);
+            margin-top: 15px;
+            display: inline-block;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        .countdown-container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border-right: 5px solid var(--gold);
+            text-align: center;
+        }
+
+        #timer-title {
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        .timer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .timer-unit {
+            background: var(--primary-blue);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            min-width: 70px;
+        }
+
+        .timer-unit span { display: block; font-size: 1.5rem; font-weight: 800; }
+        .timer-unit label { font-size: 0.7rem; }
+
+        .table-responsive {
+            overflow-x: auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        table { width: 100%; border-collapse: collapse; min-width: 700px; }
+        th { background-color: var(--primary-blue); color: white; padding: 15px 5px; font-size: 0.85rem; }
+        td { padding: 12px 5px; border-bottom: 1px solid #eee; text-align: center; font-size: 0.9rem; }
+
+        .day-past { background-color: #f8f9fa; color: #adb5bd; }
+        .day-current { background-color: #fff9c4 !important; outline: 2px solid var(--gold); font-weight: bold; z-index: 1; position: relative; }
+        
+        .status-done { color: #2ecc71; font-weight: bold; font-size: 0.8rem; }
+        .status-now { color: var(--primary-blue); font-weight: bold; font-size: 0.8rem; }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .dua-box {
+            font-family: 'Amiri', serif;
+            font-size: 1.25rem;
+            background: #fdfaf0;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px dashed var(--gold);
+            line-height: 1.8;
+            color: #444;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f1f1f1;
+            color: #777;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        footer a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #b8860b;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 4px 12px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    background-color: #b8860b;
+    color: white;
+    box-shadow: 0 0 8px rgba(184,134,11,0.6);
+}
+
+        @media (max-width: 600px) {
+            .timer-unit { min-width: 60px; }
+            th, td { font-size: 0.75rem; padding: 8px 3px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="margin:0; font-size: 1.8rem;">إمساكية شهر رمضان المبارك 1447هـ</h1>
+        <p style="margin: 5px 0;">محافظة بابل   2026م</p>
+        <div class="thawab-banner">بثواب المرحوم: مجيد ناصر سنيد</div>
+    </header>
+
+    <div class="container">
+        <div class="countdown-container">
+            <span id="timer-title">جاري التحميل...</span>
+            <div class="timer-grid">
+                <div class="timer-unit"><span id="hours">00</span><label>ساعة</label></div>
+                <div class="timer-unit"><span id="minutes">00</span><label>دقيقة</label></div>
+                <div class="timer-unit"><span id="seconds">00</span><label>ثانية</label></div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>رمضان</th>
+                        <th>اليوم</th>
+                        <th>ميلادي</th>
+                        <th>الإمساك</th>
+                        <th>الفجر</th>
+                        <th>الشروق</th>
+                        <th>الظهر</th>
+                        <th>المغرب</th>
+                        <th>الحالة</th>
+                    </tr>
+                </thead>
+                <tbody id="imsakia-body"></tbody>
+            </table>
+        </div>
+
+        <div class="info-cards">
+            <div class="card">
+                <h3 style="color: var(--primary-blue);">🤲 عند الإفطار</h3>
+                <div class="dua-box">
+                    "اللهم لك صمنا، وعلى رزقك أفطرنا فتقبله منا، ذهب الظمأ وابتلت العروق وثبت الأجر إن شاء الله."
+                </div>
+            </div>
+            <div class="card">
+                <h3 style="color: var(--primary-blue);">📍 ملاحظة</h3>
+                <p style="font-size: 0.9rem;">تم ضبط التوقيتات حسب مدينة بابل. يرجى مراعاة فرق التوقيت للمناطق البعيدة. يمسك الصائم قبل أذان الفجر بـ 10 دقائق احتياطاً.</p>
+            </div>
+        </div>
+    </div>
+
+ <style>
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-family: "Cairo", sans-serif;
+    font-size: 14px;
+    color: #444;
+}
+
+footer a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #b8860b;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 4px 12px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    background-color: #b8860b;
+    color: white;
+    box-shadow: 0 0 8px rgba(184,134,11,0.6);
+}
+</style>
+
+<footer>
+    تصميم الإمساكية صدقة جارية عن روح المرحوم مجيد ناصر سنيد<br>
+    نسألكم الدعاء<br>
+    <a href="https://www.ali-altaee.free.nf/" target="_blank">علي الطائي ©</a>
+</footer>
+
+    <script>
+        const ramadanData = [
+            { h: 1, day: "الخميس", m: "19 شباط", imsak: "05:09", fajr: "05:19", sunrise: "06:42", dhuhr: "12:17", maghrib: "18:07", iso: "2026-02-19" },
+            { h: 2, day: "الجمعة", m: "20 شباط", imsak: "05:08", fajr: "05:18", sunrise: "06:41", dhuhr: "12:16", maghrib: "18:07", iso: "2026-02-20" },
+            { h: 3, day: "السبت", m: "21 شباط", imsak: "05:07", fajr: "05:17", sunrise: "06:40", dhuhr: "12:16", maghrib: "18:08", iso: "2026-02-21" },
+            { h: 4, day: "الأحد", m: "22 شباط", imsak: "05:06", fajr: "05:16", sunrise: "06:39", dhuhr: "12:16", maghrib: "18:09", iso: "2026-02-22" },
+            { h: 5, day: "الاثنين", m: "23 شباط", imsak: "05:05", fajr: "05:15", sunrise: "06:38", dhuhr: "12:16", maghrib: "18:10", iso: "2026-02-23" },
+            { h: 6, day: "الثلاثاء", m: "24 شباط", imsak: "05:04", fajr: "05:14", sunrise: "06:37", dhuhr: "12:16", maghrib: "18:11", iso: "2026-02-24" },
+            { h: 7, day: "الأربعاء", m: "25 شباط", imsak: "05:03", fajr: "05:13", sunrise: "06:36", dhuhr: "12:16", maghrib: "18:11", iso: "2026-02-25" },
+            { h: 8, day: "الخميس", m: "26 شباط", imsak: "05:02", fajr: "05:12", sunrise: "06:35", dhuhr: "12:16", maghrib: "18:12", iso: "2026-02-26" },
+            { h: 9, day: "الجمعة", m: "27 شباط", imsak: "05:01", fajr: "05:11", sunrise: "06:34", dhuhr: "12:15", maghrib: "18:13", iso: "2026-02-27" },
+            { h: 10, day: "السبت", m: "28 شباط", imsak: "05:00", fajr: "05:10", sunrise: "06:32", dhuhr: "12:15", maghrib: "18:14", iso: "2026-02-28" },
+            { h: 11, day: "الأحد", m: "01 آذار", imsak: "04:58", fajr: "05:08", sunrise: "06:30", dhuhr: "12:15", maghrib: "18:15", iso: "2026-03-01" },
+            { h: 12, day: "الاثنين", m: "02 آذار", imsak: "04:57", fajr: "05:07", sunrise: "06:29", dhuhr: "12:15", maghrib: "18:16", iso: "2026-03-02" },
+            { h: 13, day: "الثلاثاء", m: "03 آذار", imsak: "04:56", fajr: "05:06", sunrise: "06:28", dhuhr: "12:15", maghrib: "18:17", iso: "2026-03-03" },
+            { h: 14, day: "الأربعاء", m: "04 آذار", imsak: "04:54", fajr: "05:04", sunrise: "06:27", dhuhr: "12:14", maghrib: "18:18", iso: "2026-03-04" },
+            { h: 15, day: "الخميس", m: "05 آذار", imsak: "04:53", fajr: "05:03", sunrise: "06:25", dhuhr: "12:14", maghrib: "18:18", iso: "2026-03-05" },
+            { h: 16, day: "الجمعة", m: "06 آذار", imsak: "04:52", fajr: "05:02", sunrise: "06:24", dhuhr: "12:14", maghrib: "18:19", iso: "2026-03-06" },
+            { h: 17, day: "السبت", m: "07 آذار", imsak: "04:51", fajr: "05:01", sunrise: "06:23", dhuhr: "12:14", maghrib: "18:20", iso: "2026-03-07" },
+            { h: 18, day: "الأحد", m: "08 آذار", imsak: "04:50", fajr: "05:00", sunrise: "06:22", dhuhr: "12:13", maghrib: "18:21", iso: "2026-03-08" },
+            { h: 19, day: "الاثنين", m: "09 آذار", imsak: "04:48", fajr: "04:58", sunrise: "06:21", dhuhr: "12:13", maghrib: "18:21", iso: "2026-03-09" },
+            { h: 20, day: "الثلاثاء", m: "10 آذار", imsak: "04:47", fajr: "04:57", sunrise: "06:19", dhuhr: "12:13", maghrib: "18:22", iso: "2026-03-10" },
+            { h: 21, day: "الأربعاء", m: "11 آذار", imsak: "04:46", fajr: "04:56", sunrise: "06:18", dhuhr: "12:13", maghrib: "18:23", iso: "2026-03-11" },
+            { h: 22, day: "الخميس", m: "12 آذار", imsak: "04:45", fajr: "04:55", sunrise: "06:17", dhuhr: "12:12", maghrib: "18:23", iso: "2026-03-12" },
+            { h: 23, day: "الجمعة", m: "13 آذار", imsak: "04:43", fajr: "04:53", sunrise: "06:16", dhuhr: "12:12", maghrib: "18:24", iso: "2026-03-13" },
+            { h: 24, day: "السبت", m: "14 آذار", imsak: "04:42", fajr: "04:52", sunrise: "06:14", dhuhr: "12:12", maghrib: "18:25", iso: "2026-03-14" },
+            { h: 25, day: "الأحد", m: "15 آذار", imsak: "04:41", fajr: "04:51", sunrise: "06:13", dhuhr: "12:12", maghrib: "18:26", iso: "2026-03-15" },
+            { h: 26, day: "الاثنين", m: "16 آذار", imsak: "04:39", fajr: "04:49", sunrise: "06:12", dhuhr: "12:11", maghrib: "18:26", iso: "2026-03-16" },
+            { h: 27, day: "الثلاثاء", m: "17 آذار", imsak: "04:38", fajr: "04:48", sunrise: "06:11", dhuhr: "12:11", maghrib: "18:27", iso: "2026-03-17" },
+            { h: 28, day: "الأربعاء", m: "18 آذار", imsak: "04:37", fajr: "04:47", sunrise: "06:09", dhuhr: "12:11", maghrib: "18:28", iso: "2026-03-18" },
+            { h: 29, day: "الخميس", m: "19 آذار", imsak: "04:35", fajr: "04:45", sunrise: "06:08", dhuhr: "12:10", maghrib: "18:28", iso: "2026-03-19" },
+            { h: 30, day: "الجمعة", m: "20 آذار", imsak: "04:34", fajr: "04:44", sunrise: "06:07", dhuhr: "12:10", maghrib: "18:29", iso: "2026-03-20" },
+        ];
+
+        // وظيفة تحويل الوقت من نظام 24 إلى 12
+        function format12h(timeStr) {
+            let [hours, minutes] = timeStr.split(':');
+            hours = parseInt(hours);
+            let suffix = hours >= 12 ? '' : ''; // لا نحتاج ص/م في كل خلية لتوفير المساحة
+            let h12 = hours % 12 || 12;
+            return `${h12}:${minutes}`;
+        }
+
+        function init() {
+            const tableBody = document.getElementById('imsakia-body');
+            const now = new Date();
+            let currentDayData = null;
+
+            ramadanData.forEach((day) => {
+                const row = document.createElement('tr');
+                const rowDate = new Date(day.iso);
+                
+                // مقارنة التاريخ (تجاهل الوقت)
+                const isPast = new Date(rowDate.toDateString()) < new Date(now.toDateString());
+                const isToday = rowDate.toDateString() === now.toDateString();
+
+                if (isPast) row.classList.add('day-past');
+                if (isToday) {
+                    row.classList.add('day-current');
+                    currentDayData = day;
+                }
+
+                row.innerHTML = `
+                    <td style="font-weight:bold">${day.h}</td>
+                    <td>${day.day}</td>
+                    <td>${day.m}</td>
+                    <td>${format12h(day.imsak)}</td>
+                    <td>${format12h(day.fajr)}</td>
+                    <td>${format12h(day.sunrise)}</td>
+                    <td>${format12h(day.dhuhr)}</td>
+                    <td><b style="color:#e67e22">${format12h(day.maghrib)}</b></td>
+                    <td>${isPast ? '<span class="status-done">تم ✅</span>' : (isToday ? '<span class="status-now">اليوم 📍</span>' : '-')}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+
+            if (currentDayData) {
+                updateCountdown(currentDayData);
+                setInterval(() => updateCountdown(currentDayData), 1000);
+            } else {
+                document.getElementById('timer-title').innerText = "رمضان كريم - بانتظار الشهر الفضيل";
+            }
+        }
+
+        function updateCountdown(todayData) {
+            const now = new Date();
+            const iftarTime = new Date(todayData.iso + "T" + todayData.maghrib + ":00");
+            const imsakTime = new Date(todayData.iso + "T" + todayData.imsak + ":00");
+            
+            let target;
+            let title = "";
+
+            if (now < imsakTime) {
+                target = imsakTime;
+                title = "الوقت المتبقي للإمساك:";
+            } else if (now < iftarTime) {
+                target = iftarTime;
+                title = "الوقت المتبقي للإفطار (المغرب):";
+            } else {
+                const tomorrow = ramadanData.find(d => d.h === todayData.h + 1);
+                if (tomorrow) {
+                    target = new Date(tomorrow.iso + "T" + tomorrow.imsak + ":00");
+                    title = "متبقي لإمساك فجر الغد:";
+                }
+            }
+
+            if (target) {
+                const diff = target - now;
+                const h = Math.floor(diff / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('timer-title').innerText = title;
+                document.getElementById('hours').innerText = h.toString().padStart(2, '0');
+                document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
+                document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
+            }
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
